@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../shared" },
+    { "path": "../ai-engine" },
+    { "path": "../email-service" },
+    { "path": "../task-service" }
+  ]
+}

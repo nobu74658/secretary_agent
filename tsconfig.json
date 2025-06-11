@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "composite": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@secretary-agent/*": ["packages/*/src"]
+    }
+  },
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./packages/database" },
+    { "path": "./packages/ai-engine" },
+    { "path": "./packages/email-service" },
+    { "path": "./packages/task-service" },
+    { "path": "./packages/core" },
+    { "path": "./packages/web-ui" },
+    { "path": "./packages/electron-main" }
+  ],
+  "exclude": ["node_modules", "dist", "build"]
+}

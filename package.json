@@ -1,0 +1,40 @@
+{
+  "name": "secretary-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered secretary agent application",
+  "workspaces": [
+    "packages/*",
+    "packages/mcp-servers/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:integration": "node test-integration.js",
+    "start:electron": "npm run build && electron start-electron.js",
+    "start:web": "npm run build && node start-web.js",
+    "lint": "eslint 'packages/*/src/**/*.{ts,tsx}'",
+    "typecheck": "tsc --noEmit",
+    "clean": "npm run clean --workspaces --if-present && rimraf node_modules",
+    "setup": "npm install && npm run build -w @secretary-agent/shared"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "electron": "^36.4.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "express": "^4.21.2",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

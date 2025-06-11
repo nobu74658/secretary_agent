@@ -1,0 +1,27 @@
+{
+  "name": "@secretary-agent/email-service",
+  "version": "0.1.0",
+  "description": "Email monitoring service for Secretary Agent",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@secretary-agent/shared": "*",
+    "imap": "^0.8.19",
+    "mailparser": "^3.0.0",
+    "nodemailer": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/imap": "^0.8.0",
+    "@types/mailparser": "^3.0.0",
+    "@types/node": "^20.0.0",
+    "@types/nodemailer": "^6.0.0",
+    "jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  }
+}
